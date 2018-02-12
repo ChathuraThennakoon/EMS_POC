@@ -1,0 +1,20 @@
+
+<div class="container">
+  <h1>{{ home.title }}</h1>
+  <dl class="list">
+    <dt>ID</dt>
+    <dd>{{ home.id }}</dd>
+    <dt>Name</dt>
+    <dd>{{ home.name }}</dd>
+    <dt>Address</dt>
+    <dd>{{ home.address }}</dd>    
+  </dl>
+</div>
+
+
+<div class="col-md-12">   
+    <button [routerLink]="['/edit', home.id]" class="btn btn-primary" >EDIT
+      <span aria-hidden="true"></span>
+    </button>
+    <button class="btn btn-danger" type="button" (click)="deleteUser(home.id)">DELETE</button>        
+  </div>  
